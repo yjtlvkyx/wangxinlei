@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./fonts/iconfont.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
     <script src="./scripts/rem.js"></script>
 
 </head>
@@ -20,25 +21,49 @@
     </div>
     <div class="main">
         <div class="types-food">
-            这里是swiper
+            <div class="swiper-container" id="swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="foods">这里是swiper1</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="foods">这里是swiper2</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="types-every">
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
-            <div class="types-e">这里是better-scroll</div>
+            <div class="types-eve">
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+                <div class="types-e">这里是better-scroll</div>
+            </div>
         </div>
     </div>
     <div class="footer">
 
     </div>
+    <script src="./scripts/bscroll.js"></script>
+    <script src="./scripts/swiper.min.js"></script>
+    <script>
+        let swiperFood = new Swiper("#swiper1", {
+            loop: true,
+            autoplay: {
+                delay: 500
+            }
+        });
+        let bScroll = new BScroll(".types-every", {
+
+        })
+    </script>
 </body>
 
 </html>
